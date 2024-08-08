@@ -4,7 +4,7 @@ AtliQ Motors is an automotive giant from the USA specializing in electric vehicl
 ## 1. ASK
 Chief: Bruce Haryali
 
-### Questions:  
+### Questions: Preliminary Analysis
 - List the top 3 and bottom 3 makers for the fiscal years 2023 and 2024 in terms of the number of 2-wheelers sold.
 - Identify the top 5 states with the highest penetration rate in 2-wheeler and 4-wheeler EV sales in FY 2024.
 - List the states with negative penetration (decline) in EV sales from 2022 to 2024?
@@ -16,14 +16,21 @@ Chief: Bruce Haryali
 - What is the projected number of EV sales (including 2-wheelers and 4-wheelers) for the top 10 states by penetration rate in 2030, based on the compounded annual growth rate (CAGR) from previous years
 - Estimate the revenue growth rate of 4-wheeler and 2-wheelers EVs in India for 2022 vs 2024 and 2023 vs 2024, assuming an average unit price. Average Price =85K for 2-Wheeler, 15L for 4-Wheeler
 
+### Questions: Secondary Analysis
+- What are the primary reasons for customers choosing 4-wheeler EVs in 2023 and 2024 (cost savings, environmental concerns, government incentives)?
+- How do government incentives and subsidies impact the adoption rates of 2-wheelers and 4-wheelers? Which states in India provided most subsidies?
+- How does the availability of charging stations infrastructure correlate with the EV sales and penetration rates in the top 5 states?
+- Who should be the brand ambassador if AtliQ Motors launches their EV/Hybrid vehicles in India and why?
+- Which state of India is ideal to start the manufacturing unit? (Based on subsidies provided, ease of doing business, stability in governance etc.)
+- Your top 3 recommendations for AtliQ Motors.
+
 
 ## 2. PREPARE
 ### Data Storage:
 The public dataset is completely available on the Code basis website platform where it stores and consolidates all available datasets for analysis. The specific individual datasets at hand can be obtained at this link below: https://codebasics.io/challenge/codebasics-resume-project-challenge
 
 ### Data Organized:
-The dataset is taken from the Vahan Sewa. Thanks to the Vahan Sewa for providing datasets for public access which is a great learning asset - feel free to explore them here: [Vahan Sewa](https://vahan.parivahan.gov.in/vahan4dashboard/vahan/view/reportview.xhtml)  
-This dataset contains only 3 csv file and 1 text file (meta_data)
+The dataset is taken from the Vahan Sewa. Thanks to the Vahan Sewa for providing datasets for public access which is a great learning asset - feel free to explore them here: [Vahan Sewa](https://vahan.parivahan.gov.in/vahan4dashboard/vahan/view/reportview.xhtml) This dataset contains only 3 csv file and 1 text file (meta_data)
 
 ## 3. PROCESS
 ### Tools Used:
@@ -31,56 +38,47 @@ This dataset contains only 3 csv file and 1 text file (meta_data)
 - Tableau
 
 ### Data Used:
-dim_customers, fact_spends
+dim_date, electric_vehicle_sales_by_makers, electric_vehicle_sales_by_state
 
-About Data:
-Column Description for dim_customers:
+### About Data:
+Column Description for electric_vehicle_sales_by_state.csv:
+- date: The date on which the data was recorded. Format: DD-MMM-YY. (Data is recorded on a monthly basis)
+- state: The name of the state where the sales data is recorded. This indicates the geographical location within India.
+- vehicle_category: The category of the vehicle, specifying whether it is a 2-Wheeler or a 4-Wheeler.
+- electric_vehicles_sold: The number of electric vehicles sold in the specified state and category on the given date.
+- total_vehicles_sold: The total number of vehicles (including both electric and non-electric) sold in the specified state and category on the given date.
 
-customer_id: This column represents the Unique ID assigned to each customer.
-gender: This column represents the gender of the customer. (Male, Female)
-age_group: This column categorizes the customer into different age groups. (21-24, 25-34, 35-45, 45+)
-marital_status: This column indicates the marital status of the customer (single, married).
-city: This column represents the city of residence for the customer. (Mumbai, Delhi-NCR, Chennai, Hyderabad, Bengaluru)
-occupation: This column denotes the occupation or profession of the customer. (Salaried IT Employees, Salaried Other Employees, Business Owners, Freelancers, Government Employees)
-average_income: This column indicates the monthly average income of the customer, in INR currency.
-Column Description for fact_spends:
 
-customer_id: This column represents the Unique ID of each customer, linking to the dim_customer table.
-month: This column indicates the month in which the spending was recorded. (May, June, July, August, September, October)
-category: This column describes the category of spending (Entertainment, Apparel, Electronics, etc).
-payment_type: This column specifies the type of payment used by the customer (Debit Card, Credit Card, UPI, Net Banking).
-spends: This column shows the total amount spent by the customer in the specified month, category and payment_type.
-Data Cleaning & Transformation:
-Microsoft Excel was used to clean and transform raw data.
-Duplicates were checked and removed.
-Gaps were checked with the TRIM function.
-Delhi NCR change into New Delhi
-4. ANALYZE
-Data Analyzing
-Power BI was used to analyze data.
+Column Description for electric_vehicle_sales_by_makers.csv:
+- date: The date on which the sales data was recorded. Format: DD-MMM-YY. (Data is recorded on a monthly basis)
+- vehicle_category: The category of the vehicle, specifying whether it is a 2-Wheeler or a 4-Wheeler.
+- maker: The name of the manufacturer or brand of the electric vehicle.
+- electric_vehicles_sold: The number of electric vehicles sold by the specified maker in the given category on the given date.
 
-Key Metrics:
-Avg income utilisation%: Find the average income utilisation % of customers (avg_spends/avg_income). The higher the average income utilisation%, the more is their likelihood to use credit cards.
 
-KPIs:
-Annual Expenditure = [Expenditure]*2
-Annual Income = [Income]*2
-Average Monthly Spend = AVERAGE(fact_spends[spend])
-Credit Card = CALCULATE([Utilisation %], fact_spends[payment_type]="Credit Card")
-Customers = COUNT(dim_customers[customer_id])
-Expenditure = SUM(fact_spends[spend])
-Expenditure* = SUM(fact_spends[spend])/6
-Female = CALCULATE([Customers], dim_customers[gender]="Female")
-Female Utilization = CALCULATE([Utilisation %], dim_customers[gender]="Female")
-Income = SUM(dim_customers[income])
-Income* = SUM(dim_customers[avg_income])
-Male = CALCULATE([Customers], dim_customers[gender]="Male")
-Male Utilization = CALCULATE([Utilisation %], dim_customers[gender]="Male")
-Male% = [Male]/[Customers]
-Net Banking = CALCULATE([Utilisation %], fact_spends[payment_type]="Net Banking")
-Saving = [Income]-[Expenditure]
-Saving* = [Income*]-[Expenditure*]
-Transaction = COUNT(fact_spends[customer_id])
-UPI = CALCULATE([Utilisation %], fact_spends[payment_type]="UPI")
-Utilisation % = [Expenditure*]/[Income*]
-5. SHARE
+Column Description for dim_date.csv:
+- date: The specific date for which the data is relevant. Format: DD-MMM-YY. (Data is recorded on a monthly basis)
+- fiscal_year: The fiscal year to which the date belongs. This is useful for financial and business analysis.
+- quarter: The fiscal quarter to which the date belongs. Fiscal quarters are typically divided as Q1, Q2, Q3, and Q4.
+
+### Data Cleaning & Transformation:
+- Microsoft Excel, Power Query was used to clean and transform raw data.
+- Duplicates were checked and removed.
+- Gaps were checked with the TRIM function.
+- DND -> Dadra Nagar and Haveli & Daman Diu, Andaman & Nicobar -> Andaman & Nicobar Islands
+- Capitalized the maker columns
+
+# 4. ANALYZE
+Data Analyzing  
+Tableau was used to analyze data.
+
+### Key Metrics:
+1. Fiscal Year: The fiscal year is a one-year period used for financial reporting and budgeting, starting on April 1st and ending on March 31st of the following year in India.
+2. Penetration Rate: This metric represents the percentage of total vehicles that are electric within a specific region or category. It is calculated as:
+		Penetration Rate =  (Electric Vehicles Sold / Total Vehicles Sold) * 100  
+   This indicates the adoption level of electric vehicles.
+3. Compound Annual Growth Rate (CAGR): CAGR measures the mean annual growth rate over a specified period longer than one year. It is calculated as:
+		CAGR = [(Ending Value / Beginning Value) ** 1/n] -1
+
+### Calculated Fields/ Parameters:
+- 
