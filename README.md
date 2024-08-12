@@ -81,4 +81,33 @@ Tableau was used to analyze data.
 		CAGR = [(Ending Value / Beginning Value) ** 1/n] -1
 
 ### Calculated Fields/ Parameters:
-- 
+- Fiscal Year (Dis) = [Fiscal Year (Con)]
+- FY Date? +9Mons = DATE(DATEADD('month',9,[Date]))
+- Average Price? 85K|15L = IF [Vehicle Category]=="2-Wheelers" THEN 85000 ELSE 1500000 END
+- Revenue? = [Average Price? 85K|15L]*[Electric Vehicles Sold]
+- #of EV Sales @2030 = ROUND(IF [Vehicle Category - States]=="2-Wheelers" THEN POWER(1+0.9217,6)* [Electric Vehicles Sold - States] ELSE POWER(1+1.1628,6)* [Electric Vehicles Sold - States] END)
+- %Difference Revenue = (SUM([CY Revenue])-SUM([PY Revenue])) / SUM([PY Revenue])
+- %Difference Sales = (SUM([CY Sales])-SUM([PY Sales])) / SUM([PY Sales])
+- %Difference Sales: EV = (SUM([CY Sales: EV])-SUM([PY Sales: EV])) / SUM([PY Sales: EV])
+- Bottom N? T|F = INDEX()>[Bottom N]
+- CAGR? EV Sold = POWER(ZN(SUM([Electric Vehicles Sold]))/LOOKUP(ZN(SUM([Electric Vehicles Sold])),-[N Years]), ZN(1/[N Years])) - 1
+- CAGR? Total Vehicle Sold = POWER(ZN(SUM([Total Vehicles Sold]))/LOOKUP(ZN(SUM([Total Vehicles Sold])),-[N Years]),  ZN(1/[N Years])) - 1
+- CY Revenue = IF [Fiscal Year (Dis)]=[Select Year] THEN [Revenue?] END
+- CY Sales = IF [Fiscal Year (Dis)]=[Select Year] THEN [Total Vehicles Sold] END
+- CY Sales: EV = IF [Fiscal Year (Dis)]=[Select Year] THEN [Electric Vehicles Sold] END
+- Growth Rate 22 Vs 24 = ZN((SUM([Revenue?])-LOOKUP(SUM([Revenue?]),-2)) / LOOKUP(SUM([Revenue?]),-2))
+- Growth Rate 23 Vs 24 = ZN((SUM([Revenue?])-LOOKUP(SUM([Revenue?]),-1)) /LOOKUP(SUM([Revenue?]),-1))
+- Non EV Sales? = SUM([Total Vehicles Sold])-SUM([Electric Vehicles Sold - States])
+- Penetration Rate? Dec = SUM([Electric Vehicles Sold - States])/SUM([Total Vehicles Sold])
+- PY Revenue = IF [Fiscal Year (Dis)]=[Select Year]-1 THEN [Revenue?] END
+- PY Sales = IF [Fiscal Year (Dis)]=[Select Year]-1 THEN [Total Vehicles Sold] END
+- PY Sales: EV = IF [Fiscal Year (Dis)]=[Select Year]-1 THEN [Electric Vehicles Sold] END
+- Top N? T|F = INDEX()<=[Top N]
+
+
+
+
+
+
+
+
