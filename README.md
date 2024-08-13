@@ -104,6 +104,16 @@ Tableau was used to analyze data.
 - PY Sales: EV = IF [Fiscal Year (Dis)]=[Select Year]-1 THEN [Electric Vehicles Sold] END
 - Top N? T|F = INDEX()<=[Top N]
 
+# 5. SHARE
+
+# 6. ACT	
+### Insights:
+
+
+### Recommendations:
+Thank you for reading and evaluating my repo :)
+Live Dashboard Link
+
 
 
 
