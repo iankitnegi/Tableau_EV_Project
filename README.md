@@ -105,6 +105,7 @@ Tableau was used to analyze data.
 - Top N? T|F = INDEX()<=[Top N]
 
 # 5. SHARE
+![Dashboard_ Main](https://github.com/user-attachments/assets/81ab69a8-d264-4cd8-930f-d548839bf72d)
 
 # 6. ACT	
 ### Insights:
