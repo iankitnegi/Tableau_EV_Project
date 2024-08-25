@@ -108,7 +108,17 @@ Tableau was used to analyze data.
 ![Dashboard_ Main](https://github.com/user-attachments/assets/81ab69a8-d264-4cd8-930f-d548839bf72d)
 
 # 6. ACT	
-### Insights:
+### Insights:	
+- Ola Electric dominated the 2-wheeler market in FY 2023-2024 with 1,582,333 units sold, while Jitendra, Being, and Ampere were the bottom performers with sales around 8,563, slightly lower, and 11,018 units respectively.
+- Goa leads in 2-wheeler EV adoption (17.99%), Karnataka shows strong performance in both 2-wheelers (13.52%) and 4-wheelers (4.25%), Delhi leads in 4-wheelers (4.29%) and is among the top for 2-wheelers (10.07%), while Maharashtra and Kerala are emerging markets with notable penetration rates.
+- Rajasthan shows a significant decline in EV sales from 2022 to 2024, Haryana's decline is steady, Uttarakhand's decline increases, Gujarat's decline is consistent from 2023, and Himachal Pradesh shows a small but steady decline.
+- Tata Motors leads with a peak in Q3 2022, Hyundai India shows stable growth, MG Motor India has a gradual increase, Mahindra & Mahindra experiences fluctuations, and Byd India consistently has the lowest sales among the top five.
+- In 2024, Karnataka outpaced Delhi in EV sales and market penetration, indicating stronger EV adoption due to favorable policies, infrastructure, and consumer preferences.
+- In 2023, BMW led the market with a CAGR of 3971.43%, and a 2-year CAGR of 1140.97% in 4-wheeler sales, showcasing its successful growth strategies.
+- Goa leads with a CAGR of 51.07%, Delhi follows at 40.33%, Punjab shows a decline at -15.02%, and other states exhibit varied growth rates.
+- EV sales peak mid-year and dip in January, with year-over-year growth from 60K units in 2022 to over 120K projected for 2024, indicating strong market growth and consumer confidence.
+- Maharashtra, Karnataka, and Tamil Nadu are projected to lead in EV sales, driven by favorable conditions and policies, suggesting strategic focus and market expansion opportunities in these states.
+- 
 
 
 ### Recommendations:
