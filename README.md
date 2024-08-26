@@ -130,5 +130,5 @@ Tableau was used to analyze data.
 - Advance Battery Tech: Invest in R&D to improve range, reduce costs, and enhance efficiency.
 - Boost Charging Network: Partner to strengthen charging infrastructure and drive adoption.
 
-Thank you for reading and evaluating my repo :)		
+Thank you for reading and evaluating my repo :)	                                								
 Live Dashboard [Link](https://public.tableau.com/app/profile/ankit.negi7687/viz/MarketResearchDashboardEVHybridVehiclesIndustryAnalysis/MainPage)
