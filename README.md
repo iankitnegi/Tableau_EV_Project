@@ -105,7 +105,11 @@ Tableau was used to analyze data.
 - Top N? T|F = INDEX()<=[Top N]
 
 # 5. SHARE
-![Dashboard_ Main](https://github.com/user-attachments/assets/81ab69a8-d264-4cd8-930f-d548839bf72d)
+![Main Page](https://github.com/user-attachments/assets/fe39afa4-1852-4310-8f9f-3c6984b1d936)	
+![Dashboard_ Market Research](https://github.com/user-attachments/assets/0e02a21a-a151-4c3e-bd66-8dcf05e15ec0)
+![Dashboard_ Market Insights](https://github.com/user-attachments/assets/d8e51c66-e349-418e-8fd0-a154c6db9de2)
+![Dashboard_ Sales Trends](https://github.com/user-attachments/assets/b4aaabc1-0c21-4f72-9432-5191dd93d4a0)
+![Dashboard_ Future Trends](https://github.com/user-attachments/assets/ce8a7108-be7c-4884-b4fc-0e9e8a985591)
 
 # 6. ACT	
 ### Insights:	
@@ -121,14 +125,10 @@ Tableau was used to analyze data.
 - 
 
 
-### Recommendations:
-Thank you for reading and evaluating my repo :)
-Live Dashboard Link
+### Recommendations:	
+- Expand EV Line: Broaden product offerings to capture diverse market segments.
+- Advance Battery Tech: Invest in R&D to improve range, reduce costs, and enhance efficiency.
+- Boost Charging Network: Partner to strengthen charging infrastructure and drive adoption.
 
-
-
-
-
-
-
-
+Thank you for reading and evaluating my repo :)		
+Live Dashboard [Link](https://public.tableau.com/app/profile/ankit.negi7687/viz/MarketResearchDashboardEVHybridVehiclesIndustryAnalysis/MainPage)
