@@ -81,6 +81,11 @@ Tableau was used to analyze data.
 		CAGR = [(Ending Value / Beginning Value) ** 1/n] -1
 
 ### Calculated Fields/ Parameters:
+![Screenshot (271)](https://github.com/user-attachments/assets/8940eade-0797-4485-8026-d27bd3399d7d)
+![Screenshot (272)](https://github.com/user-attachments/assets/c052c56d-4e2a-4c43-a660-8329e7c904cc)
+![Screenshot (273)](https://github.com/user-attachments/assets/780e7a8a-5203-4805-84da-35c71d1f8cb4)
+![Screenshot (274)](https://github.com/user-attachments/assets/23be30df-ff86-47cf-bc9c-ebff98e4b0dd)
+
 - Fiscal Year (Dis) = [Fiscal Year (Con)]
 - FY Date? +9Mons = DATE(DATEADD('month',9,[Date]))
 - Average Price? 85K|15L = IF [Vehicle Category]=="2-Wheelers" THEN 85000 ELSE 1500000 END
@@ -122,7 +127,7 @@ Tableau was used to analyze data.
 - Goa leads with a CAGR of 51.07%, Delhi follows at 40.33%, Punjab shows a decline at -15.02%, and other states exhibit varied growth rates.
 - EV sales peak mid-year and dip in January, with year-over-year growth from 60K units in 2022 to over 120K projected for 2024, indicating strong market growth and consumer confidence.
 - Maharashtra, Karnataka, and Tamil Nadu are projected to lead in EV sales, driven by favorable conditions and policies, suggesting strategic focus and market expansion opportunities in these states.
-- 
+- Both 4-Wheeler and 2-Wheeler EV markets are projected to see substantial revenue growth from 2022 to 2024, with 4-Wheelers reaching ₹1,798B and 2-Wheelers ₹785B, driven by exceptionally high growth rates each year.
 
 
 ### Recommendations:	
